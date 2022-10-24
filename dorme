@@ -1,0 +1,3 @@
+echo 'vou dormir'
+sleep 5
+echo 'acabei de dormir'

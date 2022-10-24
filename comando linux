@@ -1,0 +1,27 @@
+
+pwd = diretorio e pasta que eu estou 
+
+ls = listar diretorios 
+
+echo = pede para o linux repetir oq voce passou 
+
+cat = eu leio um arquivo no terminal : cat nomedoarquivo
+
+comando para escrever em arquivo = echo "ola" > ola.txt
+
+tecla TAB sugere um nome 
+
+clear = limpa tela 
+
+ls -l mostra informações sobre os diretorios
+
+ls -la mostra informaçõesw de todos os diretorios
+
+man : ensina soobre algum comando 
+
+letra q sai dos visualizadores
+
+cd troca de diretorio 
+
+
+

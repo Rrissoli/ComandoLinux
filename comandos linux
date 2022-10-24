@@ -1,0 +1,88 @@
+
+pwd = diretorio e pasta que eu estou 
+
+ls = listar diretorios 
+
+echo = pede para o linux repetir oq voce passou 
+
+cat = eu leio um arquivo no terminal : cat nomedoarquivo
+
+comando para escrever em arquivo = echo "ola" > ola.txt
+
+tecla TAB sugere um nome 
+
+clear = limpa tela 
+
+ls -l mostra informações sobre os diretorios
+
+ls -la mostra informaçõesw de todos os diretorios
+
+man : ensina soobre algum comando 
+
+letra q sai dos visualizadores
+
+cd troca de diretorio 
+
+cd .. volta pro diretorio anterior 
+
+mkdir cria um diretorio 
+
+-CARACTERES CORINGA
+
+rm nomearquiv0 apaagar arquivo
+
+rmdir nomedir apagar diretorio vazio
+
+rm -r nomedir apaga tudo do diretorio e o diretorio
+
+cp nomedorarquiv2  nomedorarquiv1  copia o arquivo
+
+mv nomedoarquivo nomeNovo trocar arquivo de nome
+
+ls * ele lista com mais precisao 
+
+cp -r ele copia diretorios 
+
+--CRIANDO ARQUIVOS ZIP--
+
+zip nomedoarquivo nomedodiretorio esse comando vai criar um zip e colocar o diretorio escolhido
+
+unzip -l mostra oq tem dentro do zip 
+
+zip -r nomearquvio nomediretorio ele vai pegar o diretorio e oq tem dentro dele
+
+-- COMPACTAÇÂO TAR --
+
+tar -cz nomediretorio > nomedoarquivo.tar.gz
+
+tar -czf nomedoarquivo.ta.gz < nomedodiretorio
+
+--alterações de arquivos--
+
+touch apenas para alterar dados daquele arquivo
+
+date mostra o dia
+
+head nomearquivo mostra as 10 primeiras linhas do texto
+
+head -n 3 nomearquivo ele tras só as primeiras 3 linhas
+
+tail nome arquivo ele tras só o final dos arquivos
+
+less nomearquivo ele tras o arquivo inteiro e pode navegar por ele tambem  
+
+vi nomearquivo eu visualizo o arquivo e com a letra i eu consigo alterar o arquivo e : eu faço comandos :w salva e :q sai ou um  :wq salva e sai
+:q! ele sai sem salvar
+
+G  te leva para a ultima linha ou 3G vai pra linha 3 ou seja,  
+numerodalinha + G  
+
+/nomepalavra pesquisa a palavra no arquivo e 'n' vaqi pra proxima ocorrencia 'N' volta pra ocorrencia anterior
+
+yy copia uma linha 
+
+p  cola a linha copiada ou 10p cola 10 vzs o mesmo conteudo
+
+
+
+
