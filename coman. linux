@@ -1,0 +1,226 @@
+
+pwd = diretorio e pasta que eu estou 
+
+ls = listar diretorios 
+
+echo = pede para o linux repetir oq voce passou 
+
+cat = eu leio um arquivo no terminal : cat nomedoarquivo
+
+comando para escrever em arquivo = echo "ola" > ola.txt
+
+tecla TAB sugere um nome 
+
+clear = limpa tela 
+
+ls -l mostra informações sobre os diretorios
+
+ls -la mostra informaçõesw de todos os diretorios
+
+man : ensina soobre algum comando 
+
+letra q sai dos visualizadores
+
+cd troca de diretorio 
+
+cd .. volta pro diretorio anterior 
+
+mkdir cria um diretorio 
+
+-CARACTERES CORINGA
+
+rm nomearquiv0 apaagar arquivo
+
+rmdir nomedir apagar diretorio vazio
+
+rm -r nomedir apaga tudo do diretorio e o diretorio
+
+cp nomedorarquiv2  nomedorarquiv1  copia o arquivo
+
+mv nomedoarquivo nomeNovo trocar arquivo de nome
+
+ls * ele lista com mais precisao 
+
+cp -r ele copia diretorios 
+
+--CRIANDO ARQUIVOS ZIP--
+
+zip nomedoarquivo nomedodiretorio esse comando vai criar um zip e colocar o diretorio escolhido
+
+unzip -l mostra oq tem dentro do zip 
+
+zip -r nomearquvio nomediretorio ele vai pegar o diretorio e oq tem dentro dele
+
+-- COMPACTAÇÂO TAR --
+
+tar -cz nomediretorio > nomedoarquivo.tar.gz
+
+tar -czf nomedoarquivo.ta.gz < nomedodiretorio
+
+--alterações de arquivos--
+
+touch apenas para alterar dados daquele arquivo
+
+date mostra o dia
+
+head nomearquivo mostra as 10 primeiras linhas do texto
+
+head -n 3 nomearquivo ele tras só as primeiras 3 linhas
+
+tail nome arquivo ele tras só o final dos arquivos
+
+less nomearquivo ele tras o arquivo inteiro e pode navegar por ele tambem  
+
+vi nomearquivo eu visualizo o arquivo e com a letra i eu consigo alterar o arquivo e : eu faço comandos :w salva e :q sai ou um  :wq salva e sai
+:q! ele sai sem salvar
+
+G  te leva para a ultima linha ou 3G vai pra linha 3 ou seja,  
+numerodalinha + G  
+
+/nomepalavra pesquisa a palavra no arquivo e 'n' vaqi pra proxima ocorrencia 'N' volta pra ocorrencia anterior
+
+yy copia uma linha 
+
+p  cola a linha copiada ou 10p cola 10 vzs o mesmo conteudo
+
+_____________________________________________________________________
+
+
+PARTE 2 DO CURSO
+
+_____________________________________________________________________
+
+            PROCESSOS
+
+ps --> lista os processos que estao rodando naquele terminal 
+
+ps -e --> mostra todos os processos do sistema 
+
+kill iddoprocesso =-- > eu mato o processo do programa caso ele trave ou algo do tipo
+
+kill -9 iddoprocesso ---> mata o processo de uma vez sem restauração , sem chance 
+
+ps -ef --> mostra todos os processo e mais informações 
+
+ps -ef | grep 'algumfiltro' -- > trago os processos q estão com a palavra reservada no filtro 
+
+--> o grep é muito utilizado prara fazer buscas dentro de arquivos e diretorios , colocando sempre uma palavra filtro na frente
+
+top --> mostra um monte de informação sobre os processos o numero de porcentagem dos processos dentro do processador , memoria etc
+
+top -u iddoprocesso --> para acompanhar as infos de um processo específco 
+
+top -p --> atualiza as infos dos processos a cada 3 segundos
+
+killall -9 'algumparametro' --> mata TODOS os processos com aquele parametro dentro do processo
+
+pstree =-->  mostra onde esta rodando o programa, como uma arvore
+
+bg iddoprocesso --> executa o programa em segundo plano , background 
+jobs --> mostra os processos em background ou frontground
+fg iddoprocesso --> coloca o processo em front
+
+& --> joga o processo para o background 
+gedit -->  cria um processo
+
+_______________________________________________________________________
+ 
+                  CRIAÇÂO DE PROGRAMAS
+passo 1 -> criar o arquivo em background => gedit nomearquivo &  
+passo 2 -> criar o script--> ex: echo 'vou dormir' sleep 5 echo 'cordei'
+passo 3 ->  rodar o script em dash --> sh nomedoarquivo
+
+obs : podemos criar tanto scrips , tanto binarios , 
+
+===>>> permissoes drwx ,dono ,  lido,  excrito e executado , 
+se nosso usuario nao tem permissão para aquele tipo de tarefa , ou seja , não é o usuario adm nem esta no grupo que pode alterar
+
+chmod +x nomedoarquivo --> muda a permissao do arquivo e adiciona executável nele .exe
+
+________________________________________________________________________
+
+locate --< eu acho determinado arquivo 
+
+updatedb --> tenho que ter sudo entao
+sudo updatedb  --->> ira fazer o update do meu banmco de dadoss 
+
+which nomedoarquivo ---> mostra em qual diretorio esta o arquivo 
+
+passwd --> muda a senha do usuario 
+sudo passwd --> mudar a senah do usuario root
+
+_________________________________________________________________________
+
+                            CONTROLE DE USUARIO
+adduser --> adiciona novo usuario e configura senha
+
+su nomedeusuario --> troca para o usuario com esse nome
+
+________________________________________________________________________
+
+                           VARIAVEIS DE AMBIENTE E PATH
+PATH é a o diretorio onde estao as váriaveis de ambiente do linux
+
+env --> voce ve o diretorio do PATH 
+env | grap PATH --> mostra essas variaveis 
+criando uma variavel de ambiente com path 
+PATH=$PATH:nomedodiretorio+arquivoexecutavel
+
+.bashrc arquivo com todos os path fixos 
+
+______________________________________________________________________
+
+                                 PACOTE DE PROGRAMAS APT
+
+apt --> gerenciamento de pacotes
+
+apt-get update --> com usuario root conseguimos atualizar todos os pacotes que necessitam de atualização
+
+apt-cash search ftp --> ele lista um monte de servidor ftp 
+
+apt-cache search vsftp --> pacote menor 
+
+apt-get install nomedopacote --> ex apt-get install vsftpd 
+
+obs todas essas ações tem que ser root
+
+ftp localhost --> crio um servidor ftp local
+
+___________________________________________________________________________________
+
+                               instalar programas que estão fora da central
+
+arquivos .deb é a versao que o ubuntu aceita 
+
+sudo dpkg -i nomedoprograma.deb --> instalação de programas via dpkg// necessita estar dentro do repositorio 
+
+sudo dpkg -r nomedoprograma --> desinstala o programa 
+
+_______________________________________________________________________________________
+
+                                Scripts de init e services
+sudo service nomedoprograma stop --> diferente do kill(menos utilizado) este comando pede para o programa/processo parar , dachances dele se recuperar
+
+sudo service nomedoprograma start --> reinicia o processo
+
+/etc/init.d/ --> onde concentra uma massa de scripts a ser executados 
+
+____________________________________________________________________________________
+
+                                 INSTALAÇÂO PELO CÒDIGO FONTE
+
+obs: porque usar um tar.gz , as permissoes de execuções sao mantidas e apos descompactar fica um diretorio do programa apenas
+
+1- verificar se falta algo, alguma dependencia --> comando = configure 
+2-rodando no diretorio do programa coamando = make / depois sudo make install
+
+____________________________________________________________________________________
+
+                                       ACESSO REMOTO
+SSh --> acesso ao terminal remoto 
+
+1- instalando  SSH comando: sudo apt-get install ssh
+2- testar --> ssh nome@ip
+3- ssh -X --> executando em modo gráfico 
+4- scp nomearquivo nome@ip:~ --> copia o arquivo para a maquina do mandante
+5- scp -r nomearquivo nome@ip~ --> copia de maneira recursiva o arquivo
